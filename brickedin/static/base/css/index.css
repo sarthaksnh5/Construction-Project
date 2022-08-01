@@ -1,0 +1,435 @@
+@media screen and (max-width: 5396px) and (min-width: 767px) {
+  .onlymobile {
+    display: none !important;
+  }
+}
+.text-capital {
+  text-transform: uppercase;
+}
+.ban-title {
+  color: #333333 !important;
+  text-transform: uppercase;
+  font-size: 32px;
+  position: relative;
+  bottom: 18px;
+}
+.ban-title span {
+  color: #E14E30;
+}
+.citysoon {
+  display: flex;
+  width: 100%;
+  color: #6a6965;
+  padding-top: 22%;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+.carousel-control {
+  display: none;
+}
+.center-image {
+  display: inline-block;
+  width: 500px;
+  margin-bottom: 20px;
+}
+.main-bar {
+  background: transparent;
+}
+.mobilevisibletext {
+  display: none;
+}
+.banner_heading {
+  color: #333333;
+  text-transform: capitalize;
+  font-size: 24px;
+  background-color: transparent;
+  padding: 0px 0px;
+  letter-spacing: 1px;
+  position: relative;
+  margin-top: 10%;
+  line-height: 37px;
+  float: left;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.banner_heading span {
+  color: #E14E30;
+}
+.carousel-caption-div h5 {
+  color: #212121;
+  line-height: 25px;
+  text-align: left;
+  margin-left: 0px;
+  font-size: 17px;
+  margin-top: 0px;
+  letter-spacing: 0.5px;
+}
+.carousel-caption-div .banner_btn {
+  float: left;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1498px) and (max-width: 1685px) {
+  .banner_heading {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 1686px) and (max-width: 1920px) {
+  .banner_heading {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 2023px) and (max-width: 3840px) {
+  .banner_heading {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .ban-title {
+    font-size: 14px;
+    bottom: 12px;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-top: 19px !important;
+    margin-bottom: 15px !important;
+    margin-right: 10px !important;
+    margin-left: 20px !important;
+  }
+  .needs-text h2 {
+    padding: 15px 25px;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+  }
+
+  .estimate a {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next,
+  .carousel-control .icon-prev {
+    display: none;
+  }
+  .carousel {
+    top: 55px;
+  }
+  .carousel-caption {
+    /*  left: 11%; 
+      width: 90%;
+      top: 9%; */
+    left: 8%;
+    top: 9%;
+  }
+
+  .banner_heading {
+    font-size: 12px;
+    margin-top: -10%;
+    letter-spacing: 0px;
+    left: -24px;
+    text-align: left;
+    line-height: 19px;
+    padding-left: 0px;
+    text-shadow: none;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  .carousel-caption-div h5 {
+    display: none;
+  }
+  .mobilevisibletext {
+    display: revert;
+    position: absolute;
+    background-color: #E14E30;
+    padding: 0px 15px;
+    margin: 0px 5%;
+    width: 85%;
+    text-align: center;
+  }
+  .mobilevisibletext h5 {
+    position: relative;
+    padding: 0px 0px;
+    font-size: 13px;
+  }
+  .banner_btn {
+    text-shadow: none !important;
+    margin: -2% 0% 0% -9% !important;
+    font-size: 9px !important;
+    letter-spacing: 1.5px;
+    padding: 6px 10px;
+  }
+  .banner-leadform {
+    width: 315px;
+    position: relative;
+    z-index: 9999;
+    right: 0%;
+    left: 0%;
+    margin: 75px 15px 30px !important;
+  }
+  .ribbon {
+    width: 297px;
+    background-color: transparent;
+    color: #000;
+    padding-top: 14px;
+    margin-bottom: 0px;
+  }
+  .fold.bottom.left,
+  .fold.bottom.right {
+    display: none;
+  }
+  .counter-plus-thousands1 {
+    right: 24% !important;
+  }
+  .counter-plus-tens {
+    right: 32% !important;
+  }
+  .counter-plus-lacs {
+    right: 11% !important;
+  }
+  .counter-plus-thousands {
+    right: 18% !important;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .ban-title {
+    font-size: 16px;
+    bottom: 8px;
+  }
+
+  .counter-plus-thousands1 {
+    right: 10% !important;
+  }
+  .counter-plus-tens {
+    right: 32% !important;
+  }
+  .counter-plus-lacs {
+    right: -8% !important;
+  }
+  .counter-plus-thousands {
+    right: 0% !important;
+  }
+  .counter-plus-tens {
+    right: 23% !important;
+  }
+  .banner_btn {
+    left: -5% !important;
+    text-shadow: none !important;
+    font-size: 9px !important;
+    letter-spacing: 1.5px;
+    padding: 6px 10px;
+    top: -15px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next,
+  .carousel-control .icon-prev {
+    display: none;
+  }
+  .carousel {
+    top: 40px !important;
+  }
+  .carousel-caption {
+    left: 11%;
+    width: 90%;
+    top: 13%;
+  }
+  .ribbon {
+    width: 432px;
+  }
+  .banner-leadform {
+    width: 400px;
+    position: relative;
+    z-index: 9999;
+    right: 0%;
+    left: 15%;
+    margin: 60px 15px 30px;
+  }
+  .banner_heading {
+    font-size: 15px;
+    margin-top: 1%;
+    left: -28px;
+    text-align: left;
+    line-height: 22px;
+    padding-left: 0px;
+    text-shadow: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+  }
+  .carousel-caption-div h5 {
+    display: none;
+  }
+  .mobilevisibletext {
+    display: revert;
+    position: absolute;
+    background-color: #E14E30;
+    padding: 0px 15px;
+    margin: 0 8%;
+    text-align: center;
+    width: 83%;
+  }
+  .mobilevisibletext h5 {
+    position: relative;
+    padding: 0px 15px;
+  }
+  .carousel-caption-div h5 {
+    display: none;
+  }
+  .ribbon {
+    width: 297px;
+    background-color: transparent;
+    color: #000;
+    padding-top: 14px;
+    margin-bottom: 0px;
+  }
+  .fold.bottom.left,
+  .fold.bottom.right {
+    display: none;
+  }
+  .owl-carousel .owl-dots {
+    display: block !important;
+  }
+}
+
+.consult {
+  margin: 15px 15px 15px !important;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  transition: all 0.15s ease-out 0s;
+  background: 0 0;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 6px !important;
+  outline: 0;
+  position: relative;
+  z-index: 1000;
+  border: 3px solid #E14E30;
+}
+.option-input:checked::before {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 9.66667px;
+  text-align: center;
+  line-height: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .ban-title {
+    font-size: 22px;
+    bottom: 8px;
+  }
+
+  .quote-img {
+    position: fixed !important;
+    top: 42%;
+    left: -10.5px;
+    width: 35px;
+  }
+  .masonry-item {
+    width: 50%;
+    padding: 0px 20px;
+  }
+  .banner_heading {
+    font-size: 18px;
+    padding: 15px 0px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    position: relative;
+    margin-top: 1%;
+    text-transform: capitalize;
+  }
+  .carousel-caption-div h5 {
+    line-height: 20px;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 15px;
+    text-shadow: none;
+  }
+  .banner_btn {
+    margin: 3% 0 0% -47%;
+    left: 0px !important;
+  }
+  .consult {
+    margin: 0px 30px 0px !important;
+  }
+  .banner-leadform {
+    width: 280px;
+    top: 18%;
+    right: 6%;
+  }
+  .ribbon {
+    width: 312px;
+  }
+}
+
+.owl-carousel .owl-item img {
+  transform-style: inherit;
+  min-width: 140px;
+}
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+.counter-plus-lacs {
+  position: absolute;
+  top: 49%;
+  right: 0%;
+  font-size: 35px;
+  font-weight: bold;
+}
+.counter-plus-thousands1 {
+  right: 16%;
+  position: absolute;
+  top: 49%;
+  font-size: 35px;
+  font-weight: 700;
+}
+.countertext {
+  color: #E14E30;
+}
+.quote-img {
+  position: fixed;
+  top: 27%;
+  left: -6.5px;
+  width: 35px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  form {
+    padding: 0 1.5em;
+  }
+  .quote-img {
+    position: fixed !important;
+    top: 42%;
+    left: -10.5px;
+    width: 35px;
+  }
+}

@@ -1,0 +1,81 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="mt-bnr-inr1 overlay-wraper bg-top-center" style="background-image:url({% static 'base/assets/portfoliobanner.jpg' %});background-repeat:no-repeat;">
+    <div class="overlay-main bg-black opacity-05"></div>
+    <div class="container">
+        <div class="mt-bnr-inr-entry">
+            <div class="banner-title-outer">
+                <div class="banner-title-name">
+                    <div class="text-white">
+                        <h1 class="mt-tilte1 m-t0 font-30 text-center">Portfolio</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- BREADCRUMB ROW -->
+            <div>
+                <ul class="mt-breadcrumb breadcrumb-style-2">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>Portfolio</li>
+                </ul>
+            </div>
+            <!-- BREADCRUMB ROW END -->
+        </div>
+    </div>
+</div>
+<!-- INNER PAGE BANNER END -->
+<!-- SECTION CONTENT START -->
+<div class="section-full  bg-gray-light  inner-page-padding">
+    <!-- GALLERY CONTENT START -->
+    <div class="container">
+        <div class="col-md-offset-4 col-md-4  p-t30 p-b30">
+            <div class="arrow-animation">
+                <div class="service-about-right m-b30" style="box-shadow: 6px 26px 15px -13px rgba(0,0,0,0.25)">
+                    <div class="call-for-quote-outer" style="width:100%;border-radius: 5px;">
+                        <div class="call-quote counter1 built-area">
+                            <h4>Built Up Area </h4>
+                        </div>
+                        <div class="call-estimate bg-dark" style="border-radius: 5px;">
+                            <a href="javascript:;" class=""> 9,00,000 Sft</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- PAGINATION START -->
+        <div class="filter-wrap p-b30 text-center">
+            <ul class="filter-navigation inline-navigation masonry-filter link-style  text-uppercase">
+                <li class="active">
+                    <a data-filter=".cat-0" href="#" id="all" data-hover="All">All</a>
+                </li>
+                <li>
+                    <a data-filter=".cat-1" href="#" onclick="residencial()" data-hover="Residential Construction">Residential Construction</a>
+                </li>
+                <li>
+                    <a data-filter=".cat-2" href="#" onclick="commercial()" data-hover="Commercial Construction">Commercial Construction</a>
+                </li>
+            </ul>
+        </div>
+        <!-- PAGINATION END -->
+        <!-- GALLERY CONTENT START -->
+        <div class="portfolio-wrap mfp-gallery work-grid row clearfix portfolio_Div" style="position: relative; height: 363px;">
+            <!-- COLUMNS 1 -->
+            <div class="masonry-item cat-0 port_area">
+                <div id="ajax_table"></div>
+                <div class="clearfix"></div>
+                <div class="flex-center">
+                    <button class="btn site-button btn-effect" id="load_more" data-val="0">View More</button>
+                </div>
+            </div>            
+        </div>
+        <!-- SECTION CONTENT END  -->
+        <div class="clearfix"></div>
+    </div>
+    <!-- CONTENT END -->
+    <!-- FOOTER START -->
+    <div style="margin-top:30px;"></div>
+</div>
+{% endblock content %}

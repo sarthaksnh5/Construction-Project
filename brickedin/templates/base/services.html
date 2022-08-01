@@ -1,0 +1,453 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div class="mt-bnr-inr1 overlay-wraper bg-top-center" style="background-image:url({% static 'base/assets/portfoliobanner.jpg' %}); background-repeat:no-repeat;background-position:top center;">
+    <div class="overlay-main bg-black opacity-05"></div>
+    <div class="container">
+        <div class="row">
+            <div class="banner-title-outer">
+                <div class="banner-title-name">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 m-t115">
+                        <div class="bg-bottom-right">
+                            <div>
+                                <ul class="mt-breadcrumb breadcrumb-style-2 text-center">
+                                    <li>
+                                        <a href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li> Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div></div><div class="clearfix"></div><div class="">
+    <div class="mt-tabs bg-tabs xs-hidden text-center">
+        <ul class="nav nav-tabs" style="display: inline-block;">
+            <li class="active" style="cursor: pointer;">
+                <a data-toggle="" href="#requestsubmit">Submit Your Request</a>
+            </li>              
+            <li>
+                <a data-toggle="" href="#whychoose">Why Choose Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="section-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="m-b10">
+                    <!-- TAB DEFAULT WITH NAV BG -->
+                    <div class="mt-tabs bg-tabs">
+                        <div class="">
+                            <div class="tab-content">
+                                <div id="requestsubmit" class="active">
+                                    <div class="sumbit-bg">
+                                        <div class="p-t20">
+                                            <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 for_shadow">
+                                                <div class="col-sm-12 form-section section-full square_shape1 square_shape2 bg-parallax bg-cover">
+                                                    <div class="">
+                                                        <div class="">
+                                                            <div class="sec-title text-center">
+                                                                <h2 class="text-uppercase sep-line-one "> Submit your Request</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- TITLE END -->
+                                                    <div class="wizard-container p-b10 p-t40" id="chartwizard">
+                                                        <div class="card wizard-card" data-color="red" id="wizard">
+                                                            {% comment %} <form name="myform" id="myform" action="" method="post" autocomplete="off">                                                                 {% endcomment %}
+                                                                <div class="wizard-navigation">
+                                                                    <div class="col-md-offset-1 col-sm-10 p-lr0">
+                                                                        <div class="progress" id="typeconstruction">
+                                                                            <div class="progress-bar progress-bar-primary"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <ul style="display: none;">
+                                                                        <li>
+                                                                            <a href="#construction" data-toggle="tab">01</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#schedular" data-toggle="tab">02</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#stage" data-toggle="tab">03</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#platsize" data-toggle="tab">04</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#fillform" data-toggle="tab">05</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane" id="construction">
+                                                                        <div class="row">
+                                                                            <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                                                                <div class="first-row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <h3 class="info-text text-center">
+                                                                                            <strong>Type of Construction </strong>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <span class="errorrescon1" style="color: red; display: none"> *Required Field (Type of Construction)</span>
+                                                                                    <div class="row product_cat">
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" data-toggle="modal" data-target="#nationalres" required="required" name="construction_type" value="Apartment" />Apartment </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" data-toggle="modal" data-target="#nationalres" required="required" name="construction_type" value="Independent House/Villa" />Independent House/Villa </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" data-toggle="modal" data-target="#nationalres" required="required" name="construction_type" value="Farm/ Guest House " />Farm/ Guest House </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" data-toggle="modal" data-target="#nationalres" required="required" name="construction_type" value="Others" />Others </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 p-t20">
+                                                                                            <!-- <div class="text-center"><input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' /><a href=""><input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='Submit' value='Submit' /></a></div> -->
+                                                                                            <div class="pull-right">
+                                                                                                <!--  <input type='button' class='btn btn-next btn-fill m-b15 site-button btn-effect m-r15 btn-wd' name='next' value='Next' /> -->
+                                                                                                <button id="nextrescon1" name="next" type="button" value="Next" class="btn btn-next btn-fill site-button btn-effect btn-wd">Next</button>
+                                                                                            </div>
+                                                                                            <div class="pull-left">
+                                                                                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                                                                                <div class="footer-checkbox">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <!--  <div class="checkbox"><label><input type="checkbox" name="optionsCheckboxes"></label></div> -->
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="schedular">
+                                                                        <div class="row">
+                                                                            <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12 p-b30">
+                                                                                <div class="first-row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <h3 class="info-text">
+                                                                                            <strong>When Do you Plan to Start </strong>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <div class="row product_cat">
+                                                                                        <div class="col-md-12">
+                                                                                            <!--<input type="date" class="form-control" required name="schedular" id="schedular" />-->
+                                                                                            <div id="datepicker" class="input-group date">
+                                                                                                <input class="form-control" type="text" required name="schedular" id="schedular" />
+                                                                                                <span class="input-group-addon">
+                                                                                                    <i class="fas fa-calendar"></i>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 p-t30">
+                                                                                            <!-- <div class="text-center"><input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' /><a href=""><input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='Submit' value='Submit' /></a></div> -->
+                                                                                            <div class="pull-right">
+                                                                                                <!-- <input type='button' class='btn btn-next btn-fill m-b15 site-button btn-effect m-r15 btn-wd' name='next' value='Next' /> -->
+                                                                                                <button name="next" type="button" value="Next" class="btn btn-next btn-fill site-button btn-effect btn-wd">Next</button>
+                                                                                            </div>
+                                                                                            <div class="pull-left">
+                                                                                                <!--  <input type='button' class='btn btn-previous btn-fill m-b15 site-button text-uppercase gray m-r5 btn-wd' name='previous' value='Previous' /> -->
+                                                                                                <button class="btn btn-previous btn-fill site-button-secondry btn-effect text-uppercase gray btn-wd" type="button" name='previous' value='Previous'>Previous</button>
+                                                                                                <div class="footer-checkbox">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <div class="checkbox">
+                                                                                                            <label>
+                                                                                                                <input type="checkbox" name="optionsCheckboxes">
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="stage">
+                                                                        <div class="row">
+                                                                            <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                                                                <div class="first-row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <h3 class="info-text text-center">
+                                                                                            <strong>Please Choose Current Stage</strong>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <span class="errorrescon2" style="color: red; display: none"> *Required Field (Choose Current Stage)</span>
+                                                                                    <div class="row product_cat">
+                                                                                        <div class="col-md-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" required="required" name="stage" value="Govt. Approvals" />Govt. Approvals </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" required="required" name="stage" value="Designing" />Designing </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" required="required" name="stage" value="Execution" />Execution </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>
+                                                                                                <input type="radio" class="option-input radio" required="required" name="stage" value="Not Specified Here" />Not Specified Here </label>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 p-t20">
+                                                                                            <!-- <div class="text-center"><input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' /><a href=""><input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='Submit' value='Submit' /></a></div> -->
+                                                                                            <div class="pull-right">
+                                                                                                <!--  <input type='button' class='btn btn-next btn-fill m-b15 site-button btn-effect m-r15 btn-wd' name='next' value='Next' /> -->
+                                                                                                <button id="nextrescon2" name="next" type="button" value="Next" class="btn btn-next btn-fill site-button btn-effect btn-wd">Next </button>
+                                                                                            </div>
+                                                                                            <div class="pull-left">
+                                                                                                <button class="btn btn-previous btn-fill site-button-secondry btn-effect text-uppercase gray btn-wd" type="button" name='previous' value='Previous'>Previous</button>
+                                                                                                <div class="footer-checkbox">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <!--  <div class="checkbox"><label><input type="checkbox" name="optionsCheckboxes"></label></div> -->
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="platsize">
+                                                                        <div class="row">
+                                                                            <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12 p-b30">
+                                                                                <div class="first-row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <h3 class="info-text">
+                                                                                            <strong>Land Details</strong>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <div class="row product_cat">
+                                                                                        <div class="col-md-4 ">
+                                                                                            <label>Land Size </label>
+                                                                                            <select class="form-control" name="plot_size_sq" id="plot_size_sq" onchange="GetValue(this)" required="">
+                                                                                                <option value="Sq yards">Sq yards</option>
+                                                                                                <option value="sq feet">Sq feet</option>
+                                                                                                <option value="sq feet">Acres</option>
+                                                                                                <option value="Not sure">Not sure</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-md-8" style="margin-top:31px;">
+                                                                                            <input type="text" class="form-control only-numeric6 test" required name="size" id="size" />
+                                                                                            <input type="text" class="form-control testsize" name="size1" id="size1" style="display: none" />
+                                                                                            <span class="errorrescon4" style="color: red; display: none"> *Required Field (Land Size)</span>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12">
+                                                                                            <label>Land Description </label>
+                                                                                            <textarea type="text" class="form-control" placeholder="Please describe your plot such as Road Width, Plot Facing, Width X Depth and any other information." required name="comments" id="comments" ></textarea>
+                                                                                            <span class="errorrescon5" style="color: red; display: none"> *Required Field (Land Description)</span>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 p-t30">
+                                                                                            <!-- <div class="text-center"><input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' /><a href=""><input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='Submit' value='Submit' /></a></div> -->
+                                                                                            <div class="pull-right">
+                                                                                                <!-- <input type='button' class='btn btn-next btn-fill m-b15 site-button btn-effect m-r15 btn-wd' name='next' value='Next' /> -->
+                                                                                                <button id="nextrescon5" name="next" type="button" value="Next" class="btn btn-next btn-fill site-button btn-effect btn-wd">Next</button>
+                                                                                            </div>
+                                                                                            <div class="pull-left">
+                                                                                                <!--  <input type='button' class='btn btn-previous btn-fill m-b15 site-button text-uppercase gray m-r5 btn-wd' name='previous' value='Previous' /> -->
+                                                                                                <button class="btn btn-previous btn-fill site-button-secondry btn-effect text-uppercase gray btn-wd" type="button" name='previous' value='Previous'>Previous</button>
+                                                                                                <div class="footer-checkbox">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <div class="checkbox">
+                                                                                                            <label>
+                                                                                                                <input type="checkbox" name="optionsCheckboxes">
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="fillform">
+                                                                        <div class="row">
+                                                                            <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+                                                                                <div class="first-row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <h3 class="info-text">
+                                                                                            <strong>Contact Information</strong>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <div class="row product_cat">
+                                                                                        <form method="POST" action="{% url 'query' %}">
+                                                                                            {% csrf_token %}
+                                                                                        <div class="col-md-6">
+                                                                                            <label>Name *</label>
+                                                                                            <input type="text" name="name" id="name" required class="form-control" />
+                                                                                            <span class="errorrescon7" style="color: red; display: none"> *Required Field (Name)</span>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <label>Phone Number *</label>
+                                                                                            <input type="text" name="phone" required size="10" id="contact" onkeypress='return isNumberKey(event);' class="form-control" />
+                                                                                            <span class="errorrescon8" style="color: red; display: none"> *Required Field (Phone Number)</span>
+                                                                                            <span class="errorrescon81" style="color: red; display: none"> *Required Field (Please enter Country Code)</span>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <label>Email *</label>
+                                                                                            <input type="email" name="email" required id="email" class="form-control" />
+                                                                                            <span class="errorrescon9" style="color: red; display: none"> *Required Field (Email ID)</span>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <label>Schedule An Appoinment</label>
+                                                                                            <!--<input type="date" class="form-control" required name="date" id="date" /><input type="hidden" class="form-control" required name="form_name" id="form_name" value="Residencial Construction" />-->
+                                                                                            <div id="datepicker1" class="input-group date">
+                                                                                                <input class="form-control" type="text" required name="date" id="date" />
+                                                                                                <span class="input-group-addon">
+                                                                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                            <input type="hidden" class="form-control" required name="form_name" id="form_name" value="Residencial Construction" />                                                                                            
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 p-t30">
+                                                                                            <!-- <div class="text-center"><input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' /><a href=""><input type='button' class='btn btn-finish btn-fill btn-warning  btn-wd' name='Submit' value='Submit' /></a></div> -->
+                                                                                            <div class="pull-right">
+                                                                                                <!-- <input type='submit' class='btn btn-finish btn-fill m-b15 site-button btn-effect m-r15 btn-wd' name='submit' id="submit" value='Submit' /> -->
+                                                                                                <input type="submit" value="Submit" class="btn btn-finish btn-fill site-button btn-effect btn-wd" />
+                                                                                            </div>                                                                                            
+                                                                                            <div class="pull-left">
+                                                                                                <!--  <input type='button' class='btn btn-previous btn-fill m-b15 site-button text-uppercase gray m-r5 btn-wd' name='previous' value='Previous' /> -->
+                                                                                                <button class="btn btn-previous btn-fill site-button-secondry btn-effect text-uppercase gray btn-wd" type="button" name='previous' value='Previous'>Previous</button>
+                                                                                                <div class="footer-checkbox">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <div class="checkbox">
+                                                                                                            <label>
+                                                                                                                <input type="checkbox" name="optionsCheckboxes">
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            {% comment %} </form> {% endcomment %}
+                                                        </div>
+                                                    </div>
+                                                    <!-- wizard container -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="whychoose" style="background-color: #f5f5f5;">
+                <div class="section-content container">
+                    <div class="row">
+                        <!-- TITLE START -->
+                        <div class="">
+                            <div class="">
+                                <div class="sec-title text-center">
+                                    <h2 class="text-uppercase sep-line-one ">Why Choose BrickedIN</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TITLE END -->
+                        <div class="section-full p-t20 p-b20 overlay-wraper bg-center bg-parallax bg-cover" data-stellar-background-ratio="0.5">
+                            <div class="overlay-main opacity-05"></div>
+                            <div class="row-pb-md">
+                                <div class="col-md-12">
+                                    <div class="col-md-4 whychoose-box">
+                                        <span class="whychoose-icon">
+                                            <img alt="Integrated Home construction and monitoring services" src="{% static 'base/assets/professional-service-icon-min.png' %}">
+                                        </span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">A turnkey company</h5>
+						                    <p class="text-left font-light">If you have been looking for different services and can’t find something satisfactory then your search stops right here. We provide a 360° service. From building structures to remodeling the old ones, for your every wish we’ve got a solution.</p>
+                                        </aside>
+                                    </div>
+                                    <div class="col-md-4 whychoose-box">
+                                        <span class="whychoose-icon">
+                                            <img alt="Wide range of Construction and monitoring services" src="{% static 'base/assets/insured-work-icon-min.png' %}">
+                                        </span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Quality Assurance</h5>
+						                    <p class="text-left font-light">More than 300 parameters are checked for quality. We make sure all the tests and checks are done by professionals. So just sit back and relax because BrickedIn is going to deliver you a more than a value-for-money project.</p>
+                                        </aside>
+                                    </div>
+                                    <div class="col-md-4 whychoose-box">
+                                        <span class="whychoose-icon">
+                                            <img alt="Integrated Home construction and monitoring services" src="{% static 'base/assets/digital-tracking-icon-min.png' %}">
+                                        </span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Complete Transparency</h5>
+						                    <p class="text-left font-light">You don’t have to worry about any hidden charges or sneaky fees. Everything is laid open at the start of the project. A safe, secure money transfer is ensured.</p>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-15">
+                                    <div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="https://www.wehouse.in/new-assets/assets/transparency-icon-min.png" alt="End to End Construction Services"></span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Real-time updates and tracking</h5>
+                                            <p class="text-left font-light">Our app will help you get the project's real-time updates. With just one click you’ll be able to get the photos, work done, material left, and many more things.</p>
+                                        </aside>
+                                    </div>
+                                    <div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="https://www.wehouse.in/new-assets/assets/quality-assurance-icon-min.png" alt="Integrated Home construction and monitoring services"></span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Professional and dedicated team</h5>
+                                            <p class="text-left font-light">Your project will be handled by a very experienced, professional, and dedicated team of engineers, architects, associate contractors, and laborers.</p>
+                                        </aside>
+                                    </div>
+                                    <div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="https://www.wehouse.in/new-assets/assets/on-time-delivery-icon.png" alt="Wide range of Construction and monitoring services"></span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Zero delays</h5>
+                                            <p class="text-left font-light">A timeline is prepared beforehand and is strictly followed. We follow the policy of no delays and adhere to it, after all, an old saying goes, “Time is money” and we believe in it.</p>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-15">
+                                    <div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="https://www.wehouse.in/new-assets/assets/flexible.png" alt="Wide range of Construction and monitoring services"></span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Quotes and budgets</h5>
+                                            <p class="text-left font-light">With our vast coverage of prices, you are not going to be disappointed. We cater to your needs with pocket-friendly quotes and the most competitive prices.</p>
+                                        </aside>
+                                    </div>
+                                    <div class="col-md-4 whychoose-box">					
+                                    </div>
+                                    <div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="https://www.wehouse.in/new-assets/assets/nocostruns.png" alt="Wide range of Construction and monitoring services"></span>
+                                        <aside class="whychoose-text">
+                                            <h5 class="margin-0">Customer Satisfaction</h5>
+                                            <p class="text-left font-light">Without your 100% content, no plan goes forward. You get the complete design, plan, and procedure, which are rectified again and again until you say a firm “Yes, I love it”.</p>
+                                        </aside>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- INNER PAGE BANNER END -->
+</div>
+<div class="clearfix"></div>
+<!-- CONTENT END -->
+{% endblock content %}

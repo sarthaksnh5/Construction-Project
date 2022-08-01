@@ -1,0 +1,282 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="padding-bottom: 40px">
+      <div
+        class="modal-header"
+        style="padding: 5px 20px 0 0; border-bottom: none"
+      >
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+        >
+          x
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="padding: 0 20px">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 style="text-align: center; color: Green; margin-top: 0">
+                THANK YOU !
+              </h3>
+              <p style="text-align: center; color: Green; font-size: 15px">
+                <b>Submitted Successfully</b>
+                <br />
+                <br />Congratulations on taking a big step. You are now one step
+                closer to your ‘Dream Project’. One of our Key Team Members will
+                assist you shortly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content" style="padding-bottom: 40px">
+      <div
+        class="modal-header"
+        style="padding: 5px 20px 0 0; border-bottom: none"
+      >
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+        >
+          x
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="padding: 0 20px">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 style="text-align: center; color: Green; margin-top: 0">
+                THANK YOU !
+              </h3>
+              <p style="text-align: center; color: Green; font-size: 15px">
+                <b>Submitted Successfully</b>
+                <br />
+                <br />Congratulations on taking a big step. You are now one step
+                closer to your ‘Dream Project’. One of our Key Team Members will
+                assist you shortly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+<div id="with-form" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title text-yellow text-center font-24">Quote</h4>
+      </div>
+      <div class="modal-body">
+        <form
+          id="myformquote"
+          name="myformquote"
+          class="mb-lg"
+          method="post"
+          action="{% url 'query' %}"
+        >
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+            <div class="container-fluid p-0">
+              <div
+                class="alert {{ message.tags }} alert-dismissible"
+                role="alert"
+              >
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="True">&times;</span>
+                </button>
+                {{ message }}
+              </div>
+            </div>
+            {% endfor %}
+          </ul>
+          {% endif %} {% csrf_token %}
+          <div class="form-group mt-lg">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="control-label">Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  placeholder="Type your name..."
+                  required
+                />
+                <span class="errornamee" style="color: red; display: none"
+                  >*Required Field (Name)</span
+                >
+              </div>
+              <div class="col-md-6">
+                <label class="control-label">Mobile</label>
+                <input
+                  name="phone"
+                  id="phone"
+                  minlength="10"
+                  class="only-numeric10 form-control"
+                  placeholder="Mobile Number"
+                  required
+                />
+                <span class="errorphonee" style="color: red; display: none"
+                  >*Required Field (Phone Number)</span
+                >
+                <span class="errorphonee1" style="color: red; display: none"
+                  >*Required Field (Please enter Country Code)</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group col-md-12 p-a0">
+              <label class="control-label">Email</label>
+              <input
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Type your email..."
+                required
+                type="email"
+              />
+              <span class="erroremaile" style="color: red; display: none"
+                >*Required Field (Email ID)</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group col-md-12 p-a0">
+              <label class="control-label">Select Service</label>
+              <select name="services" id="depts" multiple>
+                <option value="Residential Construction">Residential Construction</option>
+                <option value="Commercial Construction">Commercial Construction</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group col-md-12 p-a0">
+              <label class="control-label">Message</label>
+              <textarea
+                rows="3"
+                name="message"
+                id="messagee"
+                class="form-control"
+                placeholder="Type your Message..."
+                required
+              ></textarea
+              ><span class="errormessagee" style="color: red; display: none"
+                >*Required Field (Message 10 to 200 Characters)</span
+              >
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="form-group col-md-12 p-a0">
+              <input
+                type="submit"
+                id="submit"
+                name="submit"
+                class="site-button btn-effect text-uppercase m-r25"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div
+      class="modal-content"
+      style="
+        background-image: url(https://www.wehouse.in/new-assets/assets/back-bg.jpg);
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        class="modal-header"
+        style="border-bottom: none; background-color: transparent"
+      >
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title text-black text-center font-30 text-uppercase">
+          Login
+        </h4>
+      </div>
+      <form
+        id="loginform"
+        name="loginform"
+        action="https://www.wehouse.in/home/user_login/"
+        method="post"
+        autocomplete="off"
+        class="form-horizontal mb-lg p-t10"
+      >
+        <div class="modal-body m-b30">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-9">
+              <input
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Type your email..."
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+              <input
+                name="password"
+                id="password"
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer text-center">
+          <p style="float: left; padding: 47px 48px">
+            ( For Existing Customers Only )
+          </p>
+          <input
+            type="submit"
+            class="site-button btn-effect text-uppercase button-sm letter-spacing-2 p-t20"
+            name="Login"
+            value="Login"
+          />
+          <p class="p-t20"><a href="">Forgot Password ?</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

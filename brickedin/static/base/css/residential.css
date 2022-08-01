@@ -1,0 +1,110 @@
+.port-pad {
+    padding: 0px;
+}
+
+.mt-post-title .post-title a:hover {
+    color: #000;
+}
+
+.mt-post-title h5 a:hover {
+    color: #000;
+}
+
+.mt-post-meta li a:hover {
+    color: #000;
+}
+
+.mt-post-meta li {
+    font-size: 15px;
+    opacity: .6;
+    font-weight: normal;
+}
+
+.mt-post-title {
+    margin-bottom: 8px;
+}
+
+.mt-post-meta {
+    margin-bottom: 10px;
+}
+
+.new-portfolio {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+
+.mt-post-title .post-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.mt-post-title h5 {
+    font-size: 16px;
+    opacity: .6;
+    font-weight: normal;
+    margin: 0px 0px 8px;
+}
+
+.mt-post-title {
+    border-bottom: 1px solid #ccc;
+}
+
+.new-portfolio .mt-post-info {
+    background-color: #fff;
+}
+
+.new-portfolio .mt-post-info:hover {
+    background-color: #E14E30;
+}
+
+.new-portfolio img {
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .port-pad {
+        padding: 0px 15px !important;
+    }
+
+    .quote-img {
+        top: 41% !important;
+        left: -10.5px !important;
+        width: 34px !important;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+    .port-pad {
+        padding: 0px 15px !important;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .portfolio-wrap {
+        padding: 0px 25px;
+    }
+
+    .modal-dialog {
+        /*  width: 100%;
+margin-top: 30px !important;
+padding: 44px 0px 15px 10px;*/
+        width: 100%;
+        margin-top: 43% !important;
+        padding: 35px 4px 16px 0px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .portfolio-wrap {
+        padding: 0px 25px;
+    }
+}
+
+/* Jan-25-2021*/
+.disabled {
+    background-color: #e2e0e0 !important;
+}
+
+.today {
+    background-color: #E14E30 !important;
+}

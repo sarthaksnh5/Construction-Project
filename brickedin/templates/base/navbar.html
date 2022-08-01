@@ -1,0 +1,101 @@
+{% load static %}
+<header class="site-header header-style-1">
+  <div class="sticky-header main-bar-wraper">
+    <div class="main-bar">
+      <div class="container">
+        <div class="logo-header">
+          <div class="logo-header-inner logo-header-one">
+            <a href="">
+              <img
+                src="{% static 'base/img/logo.png' %}"
+                alt="BrickedIN Logo"
+              />
+            </a>
+          </div>
+        </div>
+        <button
+          data-target=".header-nav"
+          data-toggle="collapse"
+          type="button"
+          class="navbar-toggle collapsed second-button animated-icon2"
+        >
+          <!-- <span class="sr-only">Toggle navigation</span> -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- ETRA Nav -->
+        <div class="extra-nav">
+          <div class="extra-cell">
+            <div data-toggle="modal" data-target="#login">
+              <i class="fa fa-user"></i>
+            </div>
+          </div>
+          <div class="extra-cell">
+            <a
+              href="tel:+91 9267956028"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Call Us"
+            >
+              <i class="fa fa-phone"></i>
+            </a>
+          </div>
+          <div class="extra-cell">
+            <a
+              href="mailto:care@brickedin.com"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Email"
+            >
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="header-nav navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="{% if page == 'home'%}active{% endif %}">
+              <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li
+              class="{% if page == 'services'%}active{% endif %} submenu-toogle"
+            >
+              <a href="#"
+                >Services<span class="caret small_caret white"></span
+              ></a>
+              <ul class="sub-menu has-child">
+                <li>
+                  <a href="{% url 'services' %}">
+                    <img
+                      alt="Service icon"
+                      src="{% static 'base/img/house.png' %}"
+                    />
+                    Residential Construction
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'services' %}">
+                    <img
+                      alt="Service icon"
+                      src="{% static 'base/img/building.png' %}"
+                    />
+                    Commercial Construction
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="{% if page == 'portfolio'%}active{% endif %}">
+              <a href="{% url 'portfolio' %}">Portfolio</a>
+            </li>
+            <li class="{% if page == 'about'%}active{% endif %}">
+              <a href="{% url 'about' %}">About Us</a>
+            </li>
+            <li class="{% if page == 'contact'%}active{% endif %}">
+              <a href="{% url 'contact' %}">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

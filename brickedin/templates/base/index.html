@@ -1,0 +1,425 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div class="page-content">
+	<div id="carousel-example-generic" class="carousel-fade carousel slide" data-ride="carousel">
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img class="onlydesktop hidden-xs" src="{% static 'base/img/banner.jpg' %}" alt="..."> <img class="onlymobile hidden-md" src="{% static 'base/img/banner.jpg' %}" alt="...">
+				<div class="container">
+					<div class="carousel-caption col-md-6">
+						<div class="carousel-caption-div">
+							<h3 class="banner_heading"><span class="ban-title">We Build Your <span>'Dream Home'</span></span><br>India's <span class="text-capital">No.1 Technology</span> powered<br>construction company</h3>
+							<br><a href="#" data-toggle="modal" data-target="#with-form" class="site-button btn-effect banner_btn">Starts from Rs.999/-sft</a>
+						</div>						
+					</div>
+					<div class="banner-leadform"><img src="{% static 'base/img/logo.png' %}" alt="">
+						<br>
+						<div class="ribbon"><span>Book a free Consultation</span><span class="fold bottom right"></span><span class="fold bottom left"></span></div>
+						<form name="bannerform" id="bannerform" action="{% url 'query' %}" method="POST" autocomplete="off">
+							{% if messages %}
+							<ul class="messages">
+								{% for message in messages %}
+								<div class="container-fluid p-0">
+									<div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="True">&times;</span>
+										</button>
+										{{ message }}
+									</div>
+								</div>
+								{% endfor %}
+							</ul>
+							{% endif %}
+							{% csrf_token %}
+							<div class="row">
+								<div class="form-group consult">
+									<label class="control-label">Name</label>
+									<input name="name" id="name" placeholder="Name" required class="form-control"> <span class="errorname" style="color:red;display:none">*Required Field (Name)</span></div>
+								<div class="form-group consult">
+									<label class="control-label">Email</label>
+									<input name="email" placeholder="Email" required class="form-control"></div>								
+								<div class="form-group consult">
+									<label class="control-label">Mobile</label>
+									<input name="phone" id="phone" required placeholder="Contact Number" onkeypress="return isNumberKey(event)" minlength="10" data-toggle="modal" data-target="#national" class="form-control"> <span class="errorphone" style="color:red;display:none">*Required Field (Phone Number)</span> <span class="errorphone1" style="color:red;display:none">*Required Field (Please enter Country Code)</span></div>
+								<div class="form-group text-center m-l20">
+									<input type="submit" id="bannersubmit" name="bannersubmit" class="m-b20 m-t10 site-button btn-effect text-uppercase m-r25">
+								</div>
+							</div>
+							<p><strong>Contact us on +91 9267956028 or +91 9999969046</strong></p>
+						</form>						
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div>
+	<div class="section-full p-b50 bg-white" id="service-section">
+		<div class="container m-b30 m-t20">
+			<div class="sec-title text-center">
+				<h1 class="text-uppercase sep-line-one">BrickedIN Services</h1>
+				<h2 class="font-14"><b>BrickedIN :</b> Build Your 'Dream Home' India's No.1 tech powered construction company. One-stop Tech-Based Construction and Design Services</h2></div>
+			<div class="row m-t20">
+				<div class="col-md-4 col-lg-3 how-works">
+					<a href="">
+						<article class="icon-box">
+							<div class="box-top">
+								<div class="box-icon"><img src="{% static 'base/img/house.png' %}" alt="Service icon"></div>
+								<div class="box-header">
+									<h5>Residential Construction</h5></div>
+							</div>
+							<div class="divider"></div>
+							<div class="box-body">
+								<p>You Dream, We Deliver!
+									<br>Let us, build your ‘Dream Home’</p>
+								<h6 class="margin-0">Book Now</h6></div>
+						</article>
+					</a>
+				</div>
+				<div class="col-md-4 col-lg-3 how-works">
+					<a href="">
+						<article class="icon-box">
+							<div class="box-top">
+								<div class="box-icon"><img src="{% static 'base/img/building.png' %}" alt="Service icon"></div>
+								<div class="box-header">
+									<h5>Commercial Construction</h5></div>
+							</div>
+							<div class="divider"></div>
+							<div class="box-body">
+								<p>Hassle-Free Execution by
+									<br>Our Expert Team</p>
+								<h6 class="margin-0">Book Now</h6></div>
+						</article>
+					</a>
+				</div>				
+				<div class="col-md-4 col-lg-3 how-works">
+					<a href="">
+						<article class="icon-box">
+							<div class="box-top">
+								<div class="box-icon"><img src="{% static 'base/img/Architect.png' %}" alt="Service icon"></div>
+								<div class="box-header">
+									<h5>Architecture & Structure</h5></div>
+							</div>
+							<div class="divider"></div>
+							<div class="box-body">
+								<p>Get Tailored Fit Designs -
+									<br>By our In-house Architects</p>
+								<h6 class="margin-0">Book Now</h6></div>
+						</article>
+					</a>
+				</div>
+				<div class="col-md-4 col-lg-3 how-works">
+					<a href="">
+						<article class="icon-box">
+							<div class="box-top">
+								<div class="box-icon"><img src="{% static 'base/img/interior.png' %}" alt="Service icon"></div>
+								<div class="box-header">
+									<h5>Interiors & Smart Home</h5></div>
+							</div>
+							<div class="divider"></div>
+							<div class="box-body">
+								<p>Get Beautiful, Smart &
+									<br>Customized Homes.</p>
+								<h6 class="margin-0">Book Now</h6></div>
+						</article>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-full mobile-page-padding p-tb50 overlay-wraper bg-cover bg-center" style="background-color: #E14E30">
+	<div class="overlay-main opacity-06"></div>
+	<div class="container">
+		<div class="section-content">
+			<div class="row">
+				<div class="col-md-3 col-sm-6 how-works">
+					<div class="text-primary mt-icon-box-wraper left">
+						<div class="icon-content text-white text-center">
+							<div class="p-t10 bg_counter countertext"><i class="flaticon-builder"></i></div>
+							<div class="font-40 font-weight-700 m-b5" id="counter"><span class="counter-value" data-count="500"></span>+</div><span class="font-16 text-center countertext">Workforce</span></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 how-works">
+					<div class="text-primary mt-icon-box-wraper left">
+						<div class="icon-content text-white text-center">
+							<div class="p-t10 bg_counter countertext"><i class="fa fa-user"></i></div>
+							<div class="font-40 font-weight-700 m-b5" id="counter"><span class="counter-value" data-count="15"></span>+</div><span class="font-16 countertext">Experience</span></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 how-works">
+					<div class="text-primary mt-icon-box-wraper left">
+						<div class="icon-content text-white text-center">
+							<div class="p-t10 bg_counter countertext"><i class="flaticon-city"></i></div>
+							<div class="font-40 font-weight-700 m-b5" id="counter"><span class="counter-value" data-count="378000"></span>+</div><span class="font-16 countertext">Built Up Area</span></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 how-works">
+					<div class="text-primary mt-icon-box-wraper left">
+						<div class="icon-content text-white text-center">
+							<div class="p-t10 bg_counter countertext"><i class="flaticon-crane"></i></div>
+							<div class="font-40 font-weight-700 m-b5" id="counter"><span class="counter-value" data-count="200"></span>+</div>
+							<div class="clearfix"></div><span class="font-16 countertext">Projects</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="section-full p-t20 p-b30 square_shape1 bg-parallax bg-cover" data-stellar-background-ratio="0.5" style="background-color:#f5f5f5;background-position:50% 70px">
+	<div class="container">
+		<div class="p-b20">
+			<div class="sec-title text-center">
+				<h2 class="text-uppercase sep-line-one text-black">BrickedIN Portfolio</h2>
+				<h3 class="font-14"><b>BrickedIN -</b> Leading Home & Commercial Construction Company in Hyderabad Who Offers End-To-End Home Solutions, With 50+ Projects Delivered in Hyderabad.</h3></div>
+		</div>
+		<div class="portfolio-wrap1 mfp-gallery work-grid row clearfix">
+			<div class="masonry-item1 cat-1 col-lg-3 col-md-4 col-sm-6 m-b20 port_area" style="padding:0 20px 0 20px">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/gallery/gal.jpg" alt' %}="Portfolio" style="height:470px">
+						<div class="figcaption text-center">
+							<h4>Kondapur, Hyderabad<br>40,000 Sft</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/gallery/gal.jpg"><i' %} class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/slider/manibal.jpg' %}" alt="" style="height:225px">
+						<div class="figcaption text-center">
+							<h4>TS47</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/slider/manibal.jpg' %}"><i class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/slider/Mainsainro.jpg' %}" alt="" style="height:225px">
+						<div class="figcaption text-center">
+							<h4>TS36</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/slider/Mainsainro.jpg' %}"><i class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/slider/Mainmanud.jpg' %}" alt="" style="height:225px">
+						<div class="figcaption text-center">
+							<h4>TS 31</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/slider/Mainmanud.jpg' %}"><i class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/slider/malwadai.jpg' %}" alt="" style="height:225px">
+						<div class="figcaption text-center">
+							<h4>TS 41</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/slider/malwadai.jpg' %}"><i class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<div class="image-effect-one hover-shadow">
+					<a href="{% static 'base/portfolio"><img src' %}="{% static 'base/assets/slider/Mainnakar.jpg' %}" alt="" style="height:225px">
+						<div class="figcaption text-center">
+							<h4>TS 54</h4></div>
+					</a> <a class="mfp-link" href="{% static 'base/assets/slider/Mainnakar.jpg' %}"><i class="fa fa-arrows-alt"></i></a></div>
+			</div>
+			<div class="masonry-item cat-2 col-lg-3 col-md-4 col-sm-6 m-b20">
+				<a href="{% static 'base/portfolio' %}">
+					<div class="mt-box our-speciallization-content" style="height:225px;padding:19px 20px">
+						<h4 class="m-t0 text-black">Projects Portfolio</h4>
+						<p class="text-black">Enter this creative space to explore</p>
+						<div class="site-button btn-effect">More Projects</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="section-full p-t20 p-b30 bg-white bg-repeat square_shape2 inner-page-padding">
+	<div class="container">
+		<div class="p-b20">
+			<div class="sec-title text-center">
+				<h2 class="text-uppercase sep-line-one">How It Works ?</h2>
+				<h3 class="font-14"><b>BrickedIN -</b> has been using cutting-edge technology from the outset to address challenges faced by the regular house construction contractors.</h3>
+			</div>
+		</div>
+		<div class="ps-timeline-sec">
+			<div class="container">
+				<ol class="ps-timeline">
+					<li onClick="initModal(1)">
+						<div class="img-handler-top">
+							<h2>Raise a Request</h2>
+						</div>
+						<span class="ps-sp-top">01</span>
+					</li>
+					<li onClick="initModal(2)">
+						<div class="img-handler-bot">
+							<h2>Meet our Expert</h2>
+						</div>
+						<span class="ps-sp-bot">02</span>
+					</li>
+					<li onClick="initModal(3)">
+						<div class="img-handler-top">
+							<h2>Book with Us</h2>
+						</div>
+						<span class="ps-sp-top">03</span>
+					</li>
+					<li onClick="initModal(4)">
+						<div class="img-handler-bot">
+							<h2>Receive Detailed Plans</h2>
+						</div>
+						<span class="ps-sp-bot">04</span>
+					</li>
+					<li onClick="initModal(5)">
+						<div class="img-handler-top">
+							<h2>Track & Transact</h2>
+						</div>
+						<span class="ps-sp-top">05</span>
+					</li>
+					<li onClick="initModal(6)">
+						<div class="img-handler-bot">
+							<h2>Settle In</h2>
+						</div>
+						<span class="ps-sp-bot">06</span>
+					</li>										
+				</ol>
+				<!-- <div class="block"></div>				 -->
+			</div>
+		</div>
+	</div>
+</div>
+<section class="ps-timeline-sec">
+	
+</section>
+<div class="clearfix"></div>
+<div class="section-full needsrow">
+	<div class="container">
+		<div class="text-center needs-text">
+			<h2>All your construction needs under one roof</h2>
+			<div class="estimate"><a href="" data-toggle="modal" data-target="#with-form">Get a free estimate now</a></div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="section-full overlay-wraper bg-center bg-parallax bg-cover p-b20 p-t40 xs-hidden" style="background-color:#f5f5f5">
+	<div class="container">
+		<div class="sec-title text-center p-b20">
+			<h2 class="text-uppercase sep-line-one text-black">Why Choose BrickedIN</h2>
+			<h4>Why Choose <b>BrickedIN.</b> Integrated Home construction and monitoring services. Professional Service. 'Best in class'</h4></div>
+		<div class="row row-pb-md">
+			<div class="col-md-12 padding-0">
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/professional-service-icon-min.png' %}" alt="Integrated Home construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">A turnkey company</h5>
+						<p class="text-left font-light">If you have been looking for different services and can’t find something satisfactory then your search stops right here. We provide a 360° service. From building structures to remodeling the old ones, for your every wish we’ve got a solution.</p>
+					</aside>
+				</div>
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/insured-work-icon-min.png' %}" alt="Wide range of Construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Quality Assurance</h5>
+						<p class="text-left font-light">More than 300 parameters are checked for quality. We make sure all the tests and checks are done by professionals. So just sit back and relax because BrickedIn is going to deliver you a more than a value-for-money project.</p>
+					</aside>
+				</div>
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/digital-tracking-icon-min.png' %}" alt="Integrated Home construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Complete Transparency</h5>
+						<p class="text-left font-light">You don’t have to worry about any hidden charges or sneaky fees. Everything is laid open at the start of the project. A safe, secure money transfer is ensured.</p>
+					</aside>
+				</div>
+			</div>
+			<div class="col-md-12 mt-15 padding-0">
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/transparency-icon-min.png' %}" alt="End to End Construction Services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Real-time updates and tracking</h5>
+						<p class="text-left font-light">Our app will help you get the project's real-time updates. With just one click you’ll be able to get the photos, work done, material left, and many more things.</p>
+					</aside>
+				</div>
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/quality-assurance-icon-min.png' %}" alt="Integrated Home construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Professional and dedicated team</h5>
+						<p class="text-left font-light">Your project will be handled by a very experienced, professional, and dedicated team of engineers, architects, associate contractors, and laborers.</p>
+					</aside>
+				</div>
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/on-time-delivery-icon.png' %}" alt="Wide range of Construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Zero delays</h5>
+						<p class="text-left font-light">A timeline is prepared beforehand and is strictly followed. We follow the policy of no delays and adhere to it, after all, an old saying goes, “Time is money” and we believe in it.</p>
+					</aside>
+				</div>
+			</div>
+			<div class="col-md-12 mt-15 padding-0">
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/flexible.png' %}" alt="Wide range of Construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Quotes and budgets</h5>
+						<p class="text-left font-light">With our vast coverage of prices, you are not going to be disappointed. We cater to your needs with pocket-friendly quotes and the most competitive prices.</p>
+					</aside>
+				</div>
+				<div class="col-md-4 whychoose-box">					
+				</div>
+				<div class="col-md-4 whychoose-box"><span class="whychoose-icon"><img src="{% static 'base/assets/nocostruns.png' %}" alt="Wide range of Construction and monitoring services"></span>
+					<aside class="whychoose-text">
+						<h5 class="margin-0">Customer Satisfaction</h5>
+						<p class="text-left font-light">Without your 100% content, no plan goes forward. You get the complete design, plan, and procedure, which are rectified again and again until you say a firm “Yes, I love it”.</p>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="section-full overlay-wraper bg-center bg-parallax bg-cover" data-stellar-background-ratio="0.5" style="background-color:#fff">
+	<div class="overlay-main"></div>
+	<div class="container">
+		<div class="section-content">
+			<div class="p-b20">
+				<div class="sec-title text-center">
+					<h2 class="text-uppercase sep-line-one text-black">Our Application</h2></div>
+			</div>
+			<div class="text-center m-b20">
+				<a href="">
+					<div class="site-button btn-effect">Book our Our Appliction Service</div>
+				</a>
+			</div>
+			<div class="call-us-section">
+				<div class="col-md-12 text-center">
+					<div>
+						<div class="services-icon top-center col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+						</div>
+						<div class="services-icon left-top col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s"><span class="circle-text mt-20"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+						</div>
+						<div class="clearfix"></div>
+						<div class="services-icon left-mid col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s"><span class="circle-text mt-20 flex-width"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+						</div>
+					</div>
+					<div class="services-icon left-bottom col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s" style="visibility:visible;animation-name:zoomIn"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+					</div>
+					<div class="services-icon right-top text-center col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s" style="visibility:visible;animation-name:zoomIn"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+					</div>
+					<div class="services-icon right-mid text-center col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s" style="visibility:visible;animation-name:zoomIn"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span></span></span>
+					</div>
+					<div class="services-icon right-bottom text-center col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s" style="visibility:visible;animation-name:zoomIn"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span><span></span>
+					</div>
+					<div class="services-icon bottom-center text-center col-lg-3 col-md-6 col-sm-6 col-xs-12 wow zoomIn" data-wow-delay=".1s" style="visibility:visible;animation-name:zoomIn"><span class="mt-10 circle-text"><i class="fa fa-angle-right md-hidden p-r-5"></i><span><span></span>
+					</div><img class="img-responsive center-image why-chooseus-image" src="{% static 'base/assets/poster.png' %}" alt="Integrated Home construction and monitoring services"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+	<div id="modal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalTitle"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p id="modalPara">Modal body text goes here.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,83 @@
+#with-form .form-group {
+    margin-bottom: 5px !important;
+    margin-top: 4px !important;
+}
+#myform .form-group {
+    margin-bottom: 20px !important;
+    margin-top: 4px !important;
+}
+.form-group label.control-label { 
+    margin: 9px 0 0 0;
+}
+.form-group {
+    margin-bottom: 20px !important;
+    margin-top: 4px !important;
+}
+.flip {
+  -webkit-perspective: 800;   
+          perspective: 800;
+        position: relative;
+        text-align: center;
+		cursor: pointer;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    width: 270px;
+    height: 300px;
+    margin-bottom: 26px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #fff;
+   
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+   z-index: 2;
+}
+.flip .card .front {
+   position: absolute;
+   width: 270px;
+   z-index: 1;
+}
+.flip .card .front img{
+  width: 270px;
+  height: 100%;
+}
+.flip .card .img {
+   position: relaitve;
+   width: 270px;
+   height: 178px;
+   z-index: 1;
+   border: 2px solid #000;
+}
+.flip .card .back {
+    background: #000000;
+  padding-top: 35%;
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+  position: absolute;
+      height: 300px;
+}
+.flip .card .back h3 {
+        color: #E14E30;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0px 35px;
+    margin-top: 0px;
+}
+.flip .card .back h2 {
+    color: #fff;
+    font-size:22px; 
+    line-height: 30px; 
+    margin-bottom: 10px;
+}
+.inner{
+  margin:0px !important;
+  width: 270px;
+}

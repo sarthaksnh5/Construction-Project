@@ -1,0 +1,140 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div class="page-content">
+    <div class="mt-bnr-inr1 overlay-wraper bg-top-center" style="background-image:url({% static '/assets/contactbanner.jpg' %});background-repeat:no-repeat">
+        <div class="overlay-main bg-black opacity-05"></div>
+        <div class="container">
+            <div class="mt-bnr-inr-entry">
+                <div class="banner-title-outer">
+                    <div class="banner-title-name">
+                        <div class="text-white">
+                            <h1 class="mt-tilte1 m-t0 font-30 text-center">Contact Us</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="mt-breadcrumb breadcrumb-style-2">
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="section-full p-t80 inner-page-padding">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="contact-info m-b30">
+                            <div class="p-l20 p-r20 p-b20 text-black">
+                                <div class="mt-icon-box-wraper left p-b30 frt-icon">
+                                    <div class="col-md-2 col-xs-4">
+                                        <img src="{% static '/assets/mobile.png' %}" alt="">
+                                    </div>
+                                    <div class="col-md-10 icon-content">
+                                        <h5 class="m-t0 font-weight-500 font-16">
+                                            <b>Phone number</b>
+                                        </h5>
+                                        <p>+91 9267956028</p>
+                                    </div>
+                                </div>
+                                <div class="mt-icon-box-wraper left p-b30">
+                                    <div class="col-md-2 col-xs-4">
+                                        <img src="{% static '/assets/email.png' %}" alt="">
+                                    </div>
+                                    <div class="col-md-10 icon-content">
+                                        <h5 class="m-t0 font-weight-500 font-16">
+                                            <b>Email address</b>
+                                        </h5>
+                                        <p>care@brickedin.com</p>
+                                    </div>
+                                </div>
+                                <div class="mt-icon-box-wraper left">
+                                    <div class="col-md-2 col-xs-4">
+                                        <img src="{% static '/assets/location.png' %}" alt="">
+                                    </div>
+                                    <div class="col-md-10 icon-content">
+                                        <h5 class="m-t0 font-weight-500 font-16">
+                                            <b>BrickedIN BuildTech Private Limited</b>
+                                        </h5>
+                                        <p>BR - 27, <br> Sector 116, <br> Noida <br> Uttar Pradesh<br></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="contact-one m-b30">
+                            <div class="sec-title text-center m-b30" style="margin-top:-32px">
+                                <div class="mt-separator-outer">
+                                    <div>
+                                        <h2 class="text-uppercase sep-line-one">Get In Touch</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="myform" name="myform" autocomplete="off" method="post" action="">
+                                <div class="form-group">
+                                    <input name="name" id="name" class="form-control" required placeholder="Name">
+                                    <span class="errorname" style="color:red;display:none">*Required Field (Name)</span>
+                                </div>
+                                <div class="form-group">
+                                    <input name="email" id="email" type="email" class="form-control" required placeholder="Email">
+                                    <span class="erroremail" style="color:red;display:none">*Required Field (Email ID)</span>
+                                </div>
+                                <div class="form-group">
+                                    <input name="phone" id="phone" minlength="10" class="only-numeric10 form-control" data-toggle="modal" data-target="#national" required placeholder="Phone Number">
+                                    <span class="errorphone" style="color:red;display:none">*Required Field (Phone Number)</span>
+                                    <span class="errorphone1" style="color:red;display:none">*Required Field (Please enter Country Code)</span>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" id="message" rows="4" class="form-control" required placeholder="Message"></textarea>
+                                    <span class="errormessage" style="color:red;display:none">*Required Field (Message 10 to 200 Characters)</span>
+                                </div>
+                                <div class="container">
+                                    <div class="modal fade" id="national" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Your current Location (Country of Residence)</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row national">
+                                                        <div class="col-md-6">
+                                                            <label>
+                                                                <input type="radio" class="option-input radio" class="form-control" required name="residence" id="residence" value="India">India </label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label>
+                                                                <input type="radio" class="option-input radio" class="form-control" required name="residence" id="residence" value="International">Outside India </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <input type="submit" id="request_quote" name="request_quote" value="Submit" class="site-button btn-effect">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="gmap-outline">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.084507291204!2d77.39352711559032!3d28.567224982443598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef64d99db015%3A0x16b9e20b3f39c9a8!2sBrickedIN%20Buildtech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1655959293431!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen aria-hidden="false" tabindex="0"></iframe>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
